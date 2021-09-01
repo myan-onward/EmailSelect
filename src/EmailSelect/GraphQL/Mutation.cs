@@ -26,7 +26,7 @@ namespace EmailSelect.GraphQL
 
             await context.SaveChangesAsync(cancellationToken);
 
-            // await eventSender.SendAsync(nameof(Subscription.OnAssociationAdded), association, cancellationToken);
+            await eventSender.SendAsync(nameof(Subscription.OnAssociationAdded), association, cancellationToken);
 
             return new AddSelectionAssociationPayload(association);
         }

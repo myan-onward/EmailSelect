@@ -69,6 +69,7 @@ namespace EmailSelect
             .AddProjections()
             .AddQueryType<Query>()
             .AddMutationType<Mutation>()
+            .AddSubscriptionType<Subscription>()
             .AddType<SelectionAssociationType>()
             .AddType<AddSelectionAssociationInputType>()
             .AddType<AddSelectionAssociationPayloadType>()
@@ -77,6 +78,7 @@ namespace EmailSelect
             .AddType<AddRuleSelectionPayloadType>()
             .AddType<DeleteRuleSelectionInputType>()
             .AddType<DeleteRuleSelectionPayloadType>()
+            .AddInMemorySubscriptions()
             .AddFiltering()
             .AddSorting();
 
